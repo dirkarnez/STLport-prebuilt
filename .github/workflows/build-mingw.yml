@@ -69,7 +69,7 @@ jobs:
           cd ${{ env.libraryName }} && 
           g++ --version && 
           ./configure --help &&
-          ./configure --enable-static --disable-rpath --prefix="$(pwd)/${{ env.installationPath }}" &&
+          ./configure --enable-static --prefix="$(pwd)/${{ env.installationPath }}" &&
           make && make install
             
       - name: Archive Release
